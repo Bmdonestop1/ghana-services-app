@@ -59,7 +59,7 @@
       localStorage.removeItem(USER_KEY);
     },
 
-    getSession() {
+    async getSession() {
       try {
         const raw = localStorage.getItem(USER_KEY);
         return raw ? JSON.parse(raw) : null;
