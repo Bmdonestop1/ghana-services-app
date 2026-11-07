@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ghanaservices.app",
+      "sha256_cert_fingerprints": [
+        "D6:25:65:2D:05:E9:23:22:AC:FF:39:ED:52:98:0A:D2:14:5C:84:67:12:45:97:9A:FD:A9:F8:9D:A7:51:62:A9"
+      ]
+    }
+  }
+]
