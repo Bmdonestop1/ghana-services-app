@@ -15,7 +15,7 @@ window.APP_CONFIG = {
   BACKEND: 'rest',
 
   // REST mode (Render / local API)
-  API_URL: 'http://localhost:3000',
+  API_URL: 'https://ghana-services-api.onrender.com',
 
   // Supabase mode (Cloudflare Pages)
   SUPABASE_URL: '',

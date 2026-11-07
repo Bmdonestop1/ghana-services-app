@@ -34,6 +34,5 @@ services:
   - type: web
     name: ghana-services-web
     env: static
-    plan: free
     buildCommand: echo "static frontend, no build step"
     staticPublishPath: frontend
