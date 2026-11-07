@@ -1,0 +1,8 @@
+# Cloudflare Pages — Stack 1: static frontend, Supabase backend.
+# Deploy with the dashboard (recommended) or:
+#   npx wrangler pages deploy frontend --project-name ghana-services-app
+# Before deploying, edit frontend/config.js:
+#   BACKEND: 'supabase'
+#   SUPABASE_URL / SUPABASE_ANON_KEY from your Supabase project settings.
+name = "ghana-services-app"
+pages_build_output_dir = "frontend"

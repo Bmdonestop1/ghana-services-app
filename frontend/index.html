@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ghana Services — find trusted repairers in Ghana. Phone, laptop, TV, fridge, plumbing, electrical and more.">
+  <title>Ghana Services — Find Trusted Repairers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="flag" aria-hidden="true"><span class="flag-red"></span><span class="flag-gold">★</span><span class="flag-green"></span></span>
+      <span class="brand-name">Ghana Services</span>
+    </div>
+    <p class="tagline">Repairers near you, across Ghana</p>
+  </header>
+
+  <main id="view" class="container">
+    <p class="muted">Loading…</p>
+  </main>
+
+  <nav id="bottomnav" class="bottomnav" aria-label="Main navigation"></nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="adapters/rest-adapter.js"></script>
+  <script src="adapters/supabase-adapter.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

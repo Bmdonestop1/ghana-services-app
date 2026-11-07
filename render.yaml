@@ -1,0 +1,39 @@
+# Render blueprint — Stack 2: Node API + static frontend, Neon Postgres.
+# Deploy: create a free Neon database first, then in the Render dashboard
+# choose "New + -> Blueprint" and point it at this repo. Render will create
+# both services below. You only need to fill in DATABASE_URL (Neon) and
+# FRONTEND_URL (the static site URL Render gives you) afterwards.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  # --- API: Node.js + Express (free web service) -------------------------
+  - type: web
+    name: ghana-services-api
+    env: node
+    plan: free
+    rootDir: api
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Paste your Neon connection string here (Render dashboard -> Environment).
+      - key: DATABASE_URL
+        sync: false
+      # Render generates a random secret for you.
+      - key: JWT_SECRET
+        generateValue: true
+      # Set to the static site URL after the first deploy, e.g.
+      # https://ghana-services-web.onrender.com
+      - key: FRONTEND_URL
+        sync: false
+
+  # --- Frontend: static site (free) --------------------------------------
+  # Serves frontend/ as-is (no build step). Before pushing, edit
+  # frontend/config.js: BACKEND: 'rest' and API_URL: the API service URL
+  # above (https://ghana-services-api.onrender.com).
+  - type: web
+    name: ghana-services-web
+    env: static
+    plan: free
+    buildCommand: echo "static frontend, no build step"
+    staticPublishPath: frontend
