@@ -12,6 +12,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ghana Services — Find Trusted Repairers">
   <meta name="twitter:description" content="Find trusted repairers in Ghana. Phone, laptop, TV, fridge, plumbing, electrical and more. Register free.">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#006032">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
   <title>Ghana Services — Find Trusted Repairers</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -36,5 +39,8 @@
   <script src="adapters/rest-adapter.js"></script>
   <script src="adapters/supabase-adapter.js"></script>
   <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) { navigator.serviceWorker.register('/sw.js'); }
+  </script>
 </body>
 </html>
