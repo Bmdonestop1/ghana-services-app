@@ -130,6 +130,8 @@ textarea { resize: vertical; }
 }
 .btn-primary { background: var(--green); border-color: var(--green); color: #fff; }
 .btn-primary:hover { background: var(--green-dark); }
+.btn-gold { background: var(--gold); border-color: var(--gold); color: #1c1c1c; }
+.download-app { margin: 10px 0 2px 34px; padding: 8px 14px; font-size: 0.9rem; }
 .btn-danger { background: #fff; border-color: var(--red); color: var(--red); }
 .btn-call { background: #eef2f0; border-color: #cbd5e1; }
 .btn-wa { background: var(--wa); border-color: var(--wa); color: #fff; }
